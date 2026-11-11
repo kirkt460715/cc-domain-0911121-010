@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:2" source="plant" mapping="codes-1">
+ <Transaction id="t1" sequence="1" at="2026-11-11T01:00:00Z">
+  <Transform id="cut1" process="cut"><Input lot="raw"><Quantity unit="kg">10</Quantity></Input><Output lot="child" location="L-B"><Quantity unit="g">9000</Quantity></Output><Waste><Quantity unit="kg">1</Quantity></Waste></Transform>
+ </Transaction>
+</Exchange>

@@ -1,0 +1,21 @@
+{
+  "id": "codes-1",
+  "revision": 1,
+  "materials": {
+    "M-01": "alloy"
+  },
+  "locations": {
+    "L-A": "A",
+    "L-B": "B"
+  },
+  "units": {
+    "kg": {
+      "unit": "kg",
+      "factor": "1"
+    },
+    "g": {
+      "unit": "kg",
+      "factor": "0.001"
+    }
+  }
+}

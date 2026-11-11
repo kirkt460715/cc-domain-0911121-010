@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:1" source="plant" mapping="codes-1">
+ <Transaction id="r1" sequence="0" at="2026-11-11T00:00:00Z">
+  <Receive id="in1" lot="raw" material="M-01" location="L-A" supplier="factory"><Quantity unit="g">10000</Quantity></Receive>
+ </Transaction>
+</Exchange>
