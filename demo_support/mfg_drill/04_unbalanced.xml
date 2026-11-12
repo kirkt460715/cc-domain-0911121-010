@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:2" source="mill" mapping="plant-codes">
+  <Transaction id="tx-unbalanced" sequence="4" at="2026-11-10T04:00:00Z">
+    <Transform id="mix-unbalanced" process="blend">
+      <Input lot="raw"><Quantity unit="kg">8</Quantity></Input>
+      <Output lot="unbalanced-child" location="LINE-1"><Quantity unit="kg">8</Quantity></Output>
+      <Waste><Quantity unit="kg">1</Quantity></Waste>
+    </Transform>
+  </Transaction>
+</Exchange>

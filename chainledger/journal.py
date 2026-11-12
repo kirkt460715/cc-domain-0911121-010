@@ -26,6 +26,14 @@ CREATE TABLE IF NOT EXISTS certificates(id TEXT PRIMARY KEY,material TEXT NOT NU
 CREATE TABLE IF NOT EXISTS recalls(id TEXT PRIMARY KEY,payload TEXT NOT NULL,state TEXT NOT NULL,revision INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS acknowledgements(recall TEXT NOT NULL,customer TEXT NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(recall,customer));
 CREATE TABLE IF NOT EXISTS checkpoints(id TEXT PRIMARY KEY,payload TEXT NOT NULL,digest TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS mfg_mappings(id TEXT NOT NULL,revision INTEGER NOT NULL,payload TEXT NOT NULL,digest TEXT NOT NULL,PRIMARY KEY(id,revision));
+CREATE TABLE IF NOT EXISTS mfg_files(digest TEXT PRIMARY KEY,source TEXT NOT NULL,received_at TEXT NOT NULL,byte_length INTEGER NOT NULL,transactions INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS mfg_transactions(source TEXT NOT NULL,external_id TEXT NOT NULL,sequence INTEGER NOT NULL,mapping_id TEXT NOT NULL,
+ mapping_revision INTEGER,mapping_digest TEXT,xml_location TEXT NOT NULL,content_digest TEXT NOT NULL,payload TEXT NOT NULL,
+ state TEXT NOT NULL,reason TEXT,envelope_id TEXT,file_digest TEXT NOT NULL,PRIMARY KEY(source,external_id));
+CREATE TABLE IF NOT EXISTS mfg_quarantine(source TEXT NOT NULL,external_id TEXT NOT NULL,file_digest TEXT NOT NULL,content_digest TEXT NOT NULL,
+ payload TEXT NOT NULL,xml_location TEXT NOT NULL,reason TEXT NOT NULL,sequence INTEGER NOT NULL,received_at TEXT NOT NULL,
+ PRIMARY KEY(source,external_id,content_digest));
 CREATE TABLE IF NOT EXISTS audit(sequence INTEGER PRIMARY KEY AUTOINCREMENT,kind TEXT NOT NULL,entity TEXT NOT NULL,payload TEXT NOT NULL,previous TEXT NOT NULL,digest TEXT NOT NULL);
 """
 

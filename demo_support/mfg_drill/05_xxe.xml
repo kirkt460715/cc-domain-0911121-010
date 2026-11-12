@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Exchange [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
+<Exchange xmlns="urn:manufacturing:1" source="mill" mapping="plant-codes">
+  <Transaction id="tx-xxe" sequence="9" at="2026-11-10T09:00:00Z">
+    <Receive id="recv-xxe" lot="xxe" material="M-ALLOY" location="SRC-A" supplier="foundry">
+      <Quantity unit="kg">&xxe;</Quantity>
+    </Receive>
+  </Transaction>
+</Exchange>

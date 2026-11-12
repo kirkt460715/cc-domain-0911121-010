@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:2" source="mill" mapping="plant-codes">
+  <Transaction id="tx-mix" sequence="2" at="2026-11-10T02:00:00Z">
+    <Transform id="mix-1" process="blend">
+      <Input lot="raw"><Quantity unit="kg">10</Quantity></Input>
+      <Input lot="raw-2"><Quantity unit="g">5000</Quantity></Input>
+      <Output lot="mix-a" location="LINE-1"><Quantity unit="kg">12</Quantity></Output>
+      <Output lot="mix-b" location="STORE-B"><Quantity unit="kg">2.5</Quantity></Output>
+      <Waste><Quantity unit="kg">0.5</Quantity></Waste>
+    </Transform>
+  </Transaction>
+</Exchange>

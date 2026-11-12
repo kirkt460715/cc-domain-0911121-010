@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:1" source="mill" mapping="plant-codes">
+  <Transaction id="tx-bad-member" sequence="3" at="2026-11-10T03:00:00Z">
+    <Transform id="mix-bad" process="blend">
+      <Input lot="raw"><Quantity unit="kg">4</Quantity></Input>
+      <Output lot="bad-child" location="NEVER-MAPPED"><Quantity unit="kg">3.5</Quantity></Output>
+      <Waste><Quantity unit="kg">0.5</Quantity></Waste>
+    </Transform>
+  </Transaction>
+</Exchange>

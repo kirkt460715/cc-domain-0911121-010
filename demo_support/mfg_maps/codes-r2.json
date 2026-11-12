@@ -1,0 +1,23 @@
+{
+  "id": "plant-codes",
+  "revision": 2,
+  "materials": {
+    "M-ALLOY": "alloy"
+  },
+  "locations": {
+    "SRC-A": "dock-a",
+    "LINE-1": "line-1",
+    "STORE-B": "store-b",
+    "NEVER-MAPPED": "store-c"
+  },
+  "units": {
+    "kg": {
+      "unit": "kg",
+      "factor": "1"
+    },
+    "g": {
+      "unit": "kg",
+      "factor": "0.001"
+    }
+  }
+}

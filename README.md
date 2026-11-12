@@ -18,7 +18,9 @@ Dockerfile 固定运行时版本。首次准备执行 docker build -t local-prod
     python -m chainledger demo
 输入端演练检查：
     python demo_support/check.py
+制造交换 XML 采集演练：
+    python -I demo_support/mfg_drill.py
 合并运行：
     sh demo_support/verify.sh
 
-输入协议、样本与故障开关见 demo_support/协议.md。输入端检查只证明本地来源的约定行为；业务演示展示当前已有功能。调用者可以在独立临时数据目录重复运行，原始样本不会被覆盖。
+输入协议、样本与故障开关见 demo_support/协议.md。输入端检查只证明本地来源的约定行为；业务演示展示当前已有功能。制造交换采集支持 urn:manufacturing:1/2 两版命名空间、版本化对照表、跨文件前序重试、整事务拒收与补齐重处理，细节与动作清单见协议文档。调用者可以在独立临时数据目录重复运行，原始样本不会被覆盖。

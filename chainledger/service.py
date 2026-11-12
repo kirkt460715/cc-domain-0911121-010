@@ -10,6 +10,7 @@ from .graph.recalls import Recalls
 from .graph.reconciliation import Stocktake
 from .views.inventory import Inventory
 from .events.exchange import Exchange
+from .events.manufacturing import ManufacturingExchange
 from .types import fail, decode, fingerprint
 
 
@@ -24,6 +25,7 @@ class SupplyChain:
         self.stocktakes = Stocktake(self.journal, self.graph)
         self.inventory = Inventory(self.journal, self.graph)
         self.exchange = Exchange(self.journal, self.consumer)
+        self.manufacturing = ManufacturingExchange(self.journal, self.consumer)
         self.quality = QualityRelease(self.journal, self.graph)
         self.packets = ShipmentPackets(self.journal, self.graph, self.trace)
         self.picking = Picking(self.journal, self.graph, self.consumer)

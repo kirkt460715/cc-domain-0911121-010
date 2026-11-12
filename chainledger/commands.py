@@ -90,6 +90,28 @@ def dispatch(app, request):
         return {"csv": app.exchange.offsets_csv()}
     if action == "compare_source":
         return app.exchange.compare_source(**values)
+    if action == "mfg_mapping_load":
+        if "file" in values:
+            return app.manufacturing.load_mapping_file(values["file"])
+        return app.manufacturing.load_mapping(values["mapping"])
+    if action == "mfg_mappings":
+        return {"mappings": app.manufacturing.mappings()}
+    if action == "mfg_ingest":
+        return app.manufacturing.ingest_xml(values["file"])
+    if action == "mfg_reprocess":
+        return app.manufacturing.reprocess(values["source"], values["external_id"])
+    if action == "mfg_transactions":
+        return {
+            "transactions": app.manufacturing.transactions(
+                values.get("source"), values.get("state")
+            )
+        }
+    if action == "mfg_transaction":
+        return app.manufacturing.transaction(values["source"], values["external_id"])
+    if action == "mfg_unresolved":
+        return {"waiting": app.manufacturing.unresolved()}
+    if action == "mfg_quarantine":
+        return {"quarantined": app.manufacturing.quarantine()}
     if action == "check":
         return app.check()
     if action == "backup":

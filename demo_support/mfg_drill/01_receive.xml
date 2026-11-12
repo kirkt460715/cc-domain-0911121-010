@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:1" source="mill" mapping="plant-codes">
+  <Transaction id="rx-1" sequence="0" at="2026-11-10T00:00:00Z">
+    <Receive id="recv-raw" lot="raw" material="M-ALLOY" location="SRC-A" supplier="foundry">
+      <Quantity unit="kg">100</Quantity>
+    </Receive>
+  </Transaction>
+  <Transaction id="rx-2" sequence="1" at="2026-11-10T00:30:00Z">
+    <Receive id="recv-raw2" lot="raw-2" material="M-ALLOY" location="SRC-A" supplier="foundry">
+      <Quantity unit="g">10000</Quantity>
+    </Receive>
+  </Transaction>
+</Exchange>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:1" source="mill" mapping="plant-codes">
+  <Transaction id="tx-unknown-tag" sequence="11" at="2026-11-10T11:00:00Z">
+    <Receive id="recv-tag" lot="tag" material="M-ALLOY" location="SRC-A" supplier="foundry">
+      <Quantity unit="kg">1</Quantity>
+      <SurpriseElement>not allowed</SurpriseElement>
+    </Receive>
+  </Transaction>
+</Exchange>

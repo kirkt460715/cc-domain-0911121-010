@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exchange xmlns="urn:manufacturing:3" source="mill" mapping="plant-codes">
+  <Transaction id="tx-bad-ns" sequence="10" at="2026-11-10T10:00:00Z">
+    <Receive id="recv-ns" lot="ns" material="M-ALLOY" location="SRC-A" supplier="foundry">
+      <Quantity unit="kg">1</Quantity>
+    </Receive>
+  </Transaction>
+</Exchange>
